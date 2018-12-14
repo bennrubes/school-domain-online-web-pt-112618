@@ -6,10 +6,7 @@ class School
   end
   
   def add_student(student, year)
-    if @roster.include?(year)
-    else
-      @roster[year] = []
-    end
+    @roster[year] ||= []
     @roster[year] << student
   end
   
